@@ -46,8 +46,9 @@ const Formulario = ({ crearCita }) => {
     cita.id = uuidv4();
 
     // crear la cita
-    crearCita(cita);
-
+    if (!formInvalid) {
+      crearCita(cita);
+    }
     // reiniciar el form
     actualizarCita({
       mascota: '',
